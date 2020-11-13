@@ -1,0 +1,79 @@
+{
+  "project_info": {
+    "project_number": "147924491044",
+    "firebase_url": "https://blahblah-dev-env-1.firebaseio.com",
+    "project_id": "blahblah-dev-env-1",
+    "storage_bucket": "blahblah-dev-env-1.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:147924491044:android:1de568ccf4f12a66ec31b1",
+        "android_client_info": {
+          "package_name": "com.ygorxkharo.bleep"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "147924491044-kn2g2ab5gnsnmvtp81141q3cgmcnj7bf.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.ygorxkharo.bleep",
+            "certificate_hash": "fd03ae891761eb424e6f0f7ab6f328611ac9ff1a"
+          }
+        },
+        {
+          "client_id": "147924491044-bp8cduij329fskdgad47vnfd5j54oflv.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.ygorxkharo.bleep",
+            "certificate_hash": "d05385e00815d2547239531b7dfea76e40cae878"
+          }
+        },
+        {
+          "client_id": "147924491044-m0fnnt25c5ukbe07ueihq63o4ljvrmm2.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.ygorxkharo.bleep",
+            "certificate_hash": "0b6fcc27cd09943e1d345411c8702dc75493c4b3"
+          }
+        },
+        {
+          "client_id": "147924491044-et4fm90s8k76573sls5hjf3hn79qjgqf.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.ygorxkharo.bleep",
+            "certificate_hash": "e58ad15793fedefaad7b9041b2ad9e2c84b0f438"
+          }
+        },
+        {
+          "client_id": "147924491044-ijvmuok43ir60k5obhl6d283rlpmkk59.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyByeJWa6DpsjxudfkljU4PDRIE9aibm0Gw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "147924491044-c8l43c7kdqvo956qe2f8hg07o241he9l.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "147924491044-ug1ak99c6j55vk0nms400gdh73ju47fl.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.ygorxkharo.bleep"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
