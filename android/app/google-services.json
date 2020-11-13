@@ -8,6 +8,42 @@
   "client": [
     {
       "client_info": {
+        "mobilesdk_app_id": "1:147924491044:android:d93f9d3d44a243bbec31b1",
+        "android_client_info": {
+          "package_name": "co.bleeptv.bleep_flutter"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "147924491044-ijvmuok43ir60k5obhl6d283rlpmkk59.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyByeJWa6DpsjxudfkljU4PDRIE9aibm0Gw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "147924491044-c8l43c7kdqvo956qe2f8hg07o241he9l.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "147924491044-ug1ak99c6j55vk0nms400gdh73ju47fl.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.ygorxkharo.bleep"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
         "mobilesdk_app_id": "1:147924491044:android:1de568ccf4f12a66ec31b1",
         "android_client_info": {
           "package_name": "com.ygorxkharo.bleep"
