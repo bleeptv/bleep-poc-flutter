@@ -60,7 +60,11 @@ class _HomeFeedPageState extends State<HomeFeedPage> {
           builder: (BuildContext context, HomeFeedState state) {
 
             if(state is HomeFeedShowError) {
-              return buildErrorScreen(state.errorMessage);
+              return buildErrorScreen(
+                state.errorMessage, () {
+                BlocProvider.of<HomeFeedBloc>(context).getWatchParties();
+               }
+              );
             }
 
             if(state is HomeFeedShowLoading) {
@@ -107,21 +111,32 @@ class _HomeFeedPageState extends State<HomeFeedPage> {
     );
   }
 
-  Widget buildErrorScreen(String errorMessage) {
+  Widget buildErrorScreen(String errorMessage, VoidCallback onReloadTry) {
     return Material(
       child: Container(
         color: Colors.white,
         child: Center(
           child: Padding(
             padding: EdgeInsets.all(DimensionsConstants.mediumSpacing),
-            child: Text(
-              errorMessage,
-              style: TextStyle(
-                  fontSize: FontConstants.smallMediumFont,
-                  color: Colors.black
-              ),
-              textAlign: TextAlign.center,
-            ),
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Text(
+                  errorMessage,
+                  style: TextStyle(
+                      fontSize: FontConstants.smallMediumFont,
+                      color: Colors.black
+                  ),
+                  textAlign: TextAlign.center,
+                ),
+                SizedBox(height: DimensionsConstants.smallMediumSpacing),
+                FlatButton(
+                    color: Colors.purple,
+                    onPressed: onReloadTry,
+                    child: Text("Reload", style: TextStyle(fontSize: FontConstants.smallFont, color: Colors.white))
+                )
+              ],
+            )
           ),
         ),
       ),
