@@ -7,6 +7,7 @@ import 'package:flutter/widgets.dart';
 class AlbumCover extends StatelessWidget {
 
   final WatchParty item;
+  final _maxTitleWordLength = 3;
 
   AlbumCover({@required this.item});
 
@@ -17,8 +18,21 @@ class AlbumCover extends StatelessWidget {
       children: <Widget>[
         AlbumBackground(),
         AlbumForeground(),
-        WatchPartyCellDetails(watchPartyTitle: this.item.title, description: this.item.description)
+        WatchPartyCellDetails(
+            watchPartyTitle: this.createAlbumTitle(this.item.title),
+            description: this.item.description
+        )
       ],
     );
+  }
+
+  String createAlbumTitle(String watchPartyTitle) {
+    final splitTitle = watchPartyTitle.split(" ");
+    if(splitTitle.length <= _maxTitleWordLength) {
+      return splitTitle.join("\n");
+    }
+    String finalAlbumTitle = splitTitle.getRange(0, _maxTitleWordLength).join("\n");
+
+    return "$finalAlbumTitle...";
   }
 }

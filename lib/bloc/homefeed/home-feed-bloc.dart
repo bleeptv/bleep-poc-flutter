@@ -23,7 +23,10 @@ class HomeFeedBloc extends Bloc<HomeFeedEvent, HomeFeedState> {
 
   ///
   /// A method to get a list of watch parties triggered from the presentation layer
-  void getWatchParties() {
+  void getWatchParties([bool isRefreshing = false]) {
+    if(isRefreshing) {
+      _homeFeedCollection.clear();
+    }
     this.add(FetchWatchPartiesEvent());
   }
 
