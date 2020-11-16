@@ -9,6 +9,8 @@ class DimensionsConstants {
   static double mediumSpacing = 32;
 
   static double smallMediumIcon = 32;
+  static double smallIcon = 24;
+  static double extraLargeIcon = 64;
 
   static double albumCoverImageWidth = 300;
   static double albumCoverHeight = 500;
@@ -17,5 +19,6 @@ class DimensionsConstants {
   static double playlistPreviewHeight = 120;
   static double primaryPlaylistItemWidth = 150;
   static double secondaryPlaylistItemWidth = 50;
-
+  static double signUpScreenIconSize = DimensionsConstants.smallIcon;
+  static double signUpStatementIconSize = DimensionsConstants.extraLargeIcon;
 }
