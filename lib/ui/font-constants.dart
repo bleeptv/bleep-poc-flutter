@@ -4,4 +4,5 @@ class FontConstants {
   static double smallFont = 16;
   static double extraSmallFont = 14;
   static double smallMediumFont = 24;
+  static double actionButtonFont = 20;
 }
