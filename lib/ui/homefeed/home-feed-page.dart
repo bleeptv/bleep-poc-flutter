@@ -5,6 +5,8 @@ import 'package:bleep_flutter/bloc/homefeed/state/HomeFeedState.dart';
 import 'package:bleep_flutter/ui/cell/watchpartyitem/watch-party-cell.dart';
 import 'package:bleep_flutter/ui/dimension-constants.dart';
 import 'package:bleep_flutter/ui/font-constants.dart';
+import 'package:bleep_flutter/ui/home/destination-slider.dart';
+import 'file:///C:/Users/asus/bleep/flutter/bleep_flutter/lib/ui/home/home_navigation_bar.dart';
 import 'package:bleep_flutter/watchparty/model/watch-party.dart';
 import 'package:bleep_flutter/watchparty/repository/apiclient/watch-party-api-client.dart';
 import 'package:flutter/material.dart';
@@ -56,11 +58,13 @@ class _HomeFeedPageState extends State<HomeFeedPage> {
             }
           }
         },
-        child: BlocBuilder<HomeFeedBloc, HomeFeedState>(
-          builder: (BuildContext context, HomeFeedState state) {
+        child: Scaffold(
+          body: BlocBuilder<HomeFeedBloc, HomeFeedState>(
+            builder: (BuildContext context, HomeFeedState state) {
 
+              Widget currentScreen;
             if(state is HomeFeedShowError) {
-              return buildErrorScreen(
+              currentScreen = buildErrorScreen(
                 state.errorMessage, () {
                 BlocProvider.of<HomeFeedBloc>(context).getWatchParties();
                }
@@ -68,15 +72,25 @@ class _HomeFeedPageState extends State<HomeFeedPage> {
             }
 
             if(state is HomeFeedShowLoading) {
-              return buildLoadingIndicator();
+              currentScreen = buildLoadingIndicator();
             }
 
             if(state is HomeFeedLoaded) {
-              return buildWatchPartyFeed(state.fetchedWatchParties);
+              currentScreen = buildWatchPartyFeed(state.fetchedWatchParties);
             }
 
-            return Container();
-          },
+              return SingleChildScrollView(
+                scrollDirection: Axis.vertical,
+                child: Column(
+                  children: [
+                    DestinationSlider(),
+                    currentScreen
+                  ],
+                ),
+              );
+            },
+          ),
+          bottomNavigationBar: HomeNavigationBar(),
         ),
     );
   }
@@ -90,8 +104,10 @@ class _HomeFeedPageState extends State<HomeFeedPage> {
           return _refreshCompleter.future;
         },
         child: ListView.builder(
+            physics: NeverScrollableScrollPhysics(),
             scrollDirection: Axis.vertical,
             itemCount: watchParties.length,
+            shrinkWrap: true,
             itemBuilder: (BuildContext context, int position) {
               WatchParty currentWatchParty = watchParties.elementAt(position);
               return WatchPartyCell(
