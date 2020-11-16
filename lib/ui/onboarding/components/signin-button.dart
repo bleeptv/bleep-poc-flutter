@@ -1,4 +1,5 @@
 import 'package:bleep_flutter/ui/dimension-constants.dart';
+import 'package:bleep_flutter/ui/font-constants.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 
@@ -43,7 +44,7 @@ class SignInButton extends StatelessWidget {
                 Text(this.signInOptionText,
                     style: TextStyle(
                       color: Colors.black,
-                      fontSize: 20,
+                      fontSize: FontConstants.actionButtonFont,
                       fontWeight: FontWeight.w500
                     )
                 )
