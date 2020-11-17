@@ -1,7 +1,7 @@
 import 'dart:async';
 
-import 'package:bleep_flutter/bloc/homefeed/events/fetch-watch-parties-event.dart';
 import 'package:bleep_flutter/bloc/homefeed/events/home-feed-event.dart';
+import 'file:///C:/Users/asus/bleep/flutter/bleep_flutter/lib/bloc/homefeed/events/fetch-watch-parties-event.dart';
 import 'package:bleep_flutter/bloc/homefeed/state/HomeFeedState.dart';
 import 'package:bleep_flutter/watchparty/model/watch-party.dart';
 import 'package:bleep_flutter/watchparty/repository/apiclient/watch-party-api-client.dart';

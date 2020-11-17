@@ -6,7 +6,7 @@ import 'package:bleep_flutter/ui/cell/watchpartyitem/watch-party-cell.dart';
 import 'package:bleep_flutter/ui/dimension-constants.dart';
 import 'package:bleep_flutter/ui/font-constants.dart';
 import 'package:bleep_flutter/ui/home/destination-slider.dart';
-import 'package:bleep_flutter/ui/home/home_navigation_bar.dart';
+import 'file:///C:/Users/asus/bleep/flutter/bleep_flutter/lib/ui/home/home_navigation_bar.dart';
 import 'package:bleep_flutter/watchparty/model/watch-party.dart';
 import 'package:bleep_flutter/watchparty/repository/apiclient/watch-party-api-client.dart';
 import 'package:flutter/material.dart';
