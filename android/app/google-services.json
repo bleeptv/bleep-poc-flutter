@@ -15,6 +15,22 @@
       },
       "oauth_client": [
         {
+          "client_id": "147924491044-n90b5cce3us7uchurahjhj9gb5gkkv4i.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "co.bleeptv.bleep_flutter",
+            "certificate_hash": "1511011d429c62237350b9237fa9ca57bacd59d0"
+          }
+        },
+        {
+          "client_id": "147924491044-n79jcp7292f068jhb23nv8rc4rbm7940.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "co.bleeptv.bleep_flutter",
+            "certificate_hash": "dc8e976eb41deb6a52a287c40310d946b38cc7fc"
+          }
+        },
+        {
           "client_id": "147924491044-ijvmuok43ir60k5obhl6d283rlpmkk59.apps.googleusercontent.com",
           "client_type": 3
         }

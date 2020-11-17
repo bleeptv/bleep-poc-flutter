@@ -62,7 +62,7 @@ class _HomeFeedPageState extends State<HomeFeedPage> {
           body: BlocBuilder<HomeFeedBloc, HomeFeedState>(
             builder: (BuildContext context, HomeFeedState state) {
 
-              Widget currentScreen;
+              Widget currentScreen = Container();
             if(state is HomeFeedShowError) {
               currentScreen = buildErrorScreen(
                 state.errorMessage, () {
