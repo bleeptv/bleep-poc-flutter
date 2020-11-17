@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>147924491044-o9lfs3r8s38cmld2c986c921mp700c5i.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.147924491044-o9lfs3r8s38cmld2c986c921mp700c5i</string>
+	<key>ANDROID_CLIENT_ID</key>
+	<string>147924491044-n90b5cce3us7uchurahjhj9gb5gkkv4i.apps.googleusercontent.com</string>
+	<key>API_KEY</key>
+	<string>AIzaSyDLJa1B7N-btRrMP0hUn6_CKVyqP1G_YmE</string>
+	<key>GCM_SENDER_ID</key>
+	<string>147924491044</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>co.bleeptv.bleepFlutter</string>
+	<key>PROJECT_ID</key>
+	<string>blahblah-dev-env-1</string>
+	<key>STORAGE_BUCKET</key>
+	<string>blahblah-dev-env-1.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:147924491044:ios:2e1d8b46b8611944ec31b1</string>
+	<key>DATABASE_URL</key>
+	<string>https://blahblah-dev-env-1.firebaseio.com</string>
+</dict>
+</plist>
