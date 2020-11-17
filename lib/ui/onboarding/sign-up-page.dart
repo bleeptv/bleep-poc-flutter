@@ -74,9 +74,14 @@ class SignUpPage extends StatelessWidget {
   }
 
   void _onLoginSuccess(BuildContext context) {
-    Navigator.of(context)
-        .push(MaterialPageRoute(builder: (context) => HomeFeedScreen()));
-    // Navigator.of(context).pop();
+
+    Navigator.pushAndRemoveUntil(
+        context,
+        MaterialPageRoute(
+            builder: (context) => HomeFeedScreen()
+        ),
+        ModalRoute.withName("")
+    );
   }
 
   void _onErrorGoogleLogin(BuildContext context, String errorMessage) {

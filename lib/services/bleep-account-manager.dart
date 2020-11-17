@@ -55,6 +55,7 @@ class BleepAccountManager {
       onSuccess();
     } catch (error) {
       onError(error.toString());
+      return;
     }
     onError(_GOOGLE_LOGIN_ERROR);
   }
