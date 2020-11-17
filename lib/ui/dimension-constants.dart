@@ -11,6 +11,7 @@ class DimensionsConstants {
   static double smallMediumIcon = 32;
   static double smallIcon = 24;
   static double extraLargeIcon = 64;
+  static double mediumIcon = 40;
 
   static double albumCoverImageWidth = 300;
   static double albumCoverHeight = 500;

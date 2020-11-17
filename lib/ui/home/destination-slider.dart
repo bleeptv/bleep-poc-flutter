@@ -1,6 +1,7 @@
 
 
 import 'package:bleep_flutter/ui/dimension-constants.dart';
+import 'package:bleep_flutter/ui/font-constants.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 
@@ -9,7 +10,7 @@ class DestinationSlider extends StatefulWidget {
 }
 
 class _DestinationSliderState extends State<DestinationSlider> {
-  double _value = 0;
+  double _value = 50;
 
   @override
   Widget build(BuildContext context) {
@@ -17,9 +18,9 @@ class _DestinationSliderState extends State<DestinationSlider> {
       margin: EdgeInsets.only(
           top: DimensionsConstants.mediumSpacing
       ),
-      width: double.infinity,
       child: Column(
         children: [
+          this.buildWalletBalance(35.51),
           Container(
             height: DimensionsConstants.smallMediumSpacing,
             margin: EdgeInsets.only(
@@ -50,6 +51,25 @@ class _DestinationSliderState extends State<DestinationSlider> {
                 },
               )
           )
+        ],
+      ),
+    );
+  }
+
+  Widget buildWalletBalance(double walletAmount) {
+    return Padding(
+      padding: EdgeInsets.only(top: DimensionsConstants.smallSpacing),
+      child: Row(
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: [
+          Text("Wallet", style: TextStyle(fontSize: FontConstants.smallMediumFont)),
+          SizedBox(width: DimensionsConstants.extraSmallSpacing),
+          Image.asset("assets/images/icons/bleep_currency_small.png",
+            width: DimensionsConstants.smallIcon,
+            height: DimensionsConstants.smallIcon,
+          ),
+          SizedBox(width: DimensionsConstants.extraSmallSpacing),
+          Text("$walletAmount", style: TextStyle(fontSize: FontConstants.smallMediumFont, fontWeight: FontWeight.w600))
         ],
       ),
     );

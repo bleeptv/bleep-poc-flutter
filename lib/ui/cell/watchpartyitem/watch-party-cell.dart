@@ -3,6 +3,8 @@ import 'dart:ui';
 import 'package:bleep_flutter/ui/cell/watchpartyitem/album-cover.dart';
 import 'package:bleep_flutter/ui/cell/watchpartyitem/credit-score-rating.dart';
 import 'package:bleep_flutter/ui/cell/watchpartyitem/invest-button.dart';
+import 'package:bleep_flutter/ui/cell/watchpartyitem/watch-party-queue.dart';
+import 'package:bleep_flutter/ui/cell/watchpartyitem/watch_party_item_actions.dart';
 import 'package:bleep_flutter/ui/dimension-constants.dart';
 import 'package:bleep_flutter/ui/font-constants.dart';
 import 'package:bleep_flutter/watchparty/model/watch-party.dart';
@@ -18,12 +20,17 @@ class WatchPartyCell extends StatelessWidget {
   Widget build(BuildContext context) {
 
     return Material(
-        child: Padding(
-          padding: EdgeInsets.only(top: DimensionsConstants.mediumLargeSpacing),
-          child: Container(
+        child: Container(
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.stretch,
               children: [
+                Padding(
+                  padding: EdgeInsets.all(DimensionsConstants.smallMediumSpacing),
+                  child: Divider(
+                    color: Colors.grey,
+                    thickness: 2,
+                  ),
+                ),
                 Padding(
                     padding: EdgeInsets.only(
                         left: DimensionsConstants.smallSpacing,
@@ -49,14 +56,15 @@ class WatchPartyCell extends StatelessWidget {
                 AlbumCover(item: this.item),
                 Row(
                   children: [
-                    InvestButton()
+                    InvestButton(),
+                    Spacer(),
+                    WatchPartyItemActions()
                   ],
-                )
+                ),
+                WatchPartyQueue()
               ],
             ),
           ),
-        )
-    );
-    throw UnimplementedError();
+        );
   }
 }
